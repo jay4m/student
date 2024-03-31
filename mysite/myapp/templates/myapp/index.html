@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Chat Form</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Student Chat</h2>
+        <form id="chatForm" action="/process_chat/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="chat">Chat:</label>
+                <textarea id="chat" name="chat" rows="4" placeholder="Enter student chat" required></textarea>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Optional: You can include JavaScript for AJAX form submission -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
